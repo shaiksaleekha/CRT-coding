@@ -1,0 +1,144 @@
+Linked list - Searching an element
+
+Write a Program to search an element from the list.
+
+Input Format
+
+Read elements upto -1
+
+Constraints
+
+1<=n<=10^7
+
+Output Format
+
+print output
+
+Sample Input 0
+
+1
+2
+3
+4
+-1
+3
+Sample Output 0
+
+3 is present in the list
+Sample Input 1
+
+1
+2
+3
+4
+5
+-1
+4
+Sample Output 1
+
+4 is present in the list
+Sample Input 2
+
+23
+11
+44
+53
+3
+56
+-1
+88
+Sample Output 2
+
+88 not present in the list
+Submissions: 51
+Max Score: 0
+Difficulty: Medium
+Rate This Challenge:
+
+    
+More
+ 
+1
+class Node:
+2
+    def __init__(self,data):
+3
+        self.data=data
+4
+        self.next=None
+5
+class singlelinkedlist:
+6
+    def __init__(self):
+7
+        self.head=self.tail=None
+8
+    def create(self,data):
+9
+        n=Node(data)
+10
+        if (self.head==None):
+11
+            self.head=self.tail=n
+12
+        else:
+13
+            self.tail.next=n
+14
+            self.tail=n
+15
+    def show(self):
+16
+        if self.head==None:
+17
+            return
+18
+        temp=self.head
+19
+        while temp!=None:
+20
+            print(temp.data)
+21
+            temp=temp.next
+22
+    def searchelement(self):
+23
+        temp=self.head
+24
+        c=0
+25
+        a=[]
+26
+        while temp!=None:
+27
+            a.append(temp.data)
+28
+            temp=temp.next
+29
+            c=c+1
+30
+        if a==a:
+31
+            print(str(a[p])+" is present in the list")
+32
+        else:
+33
+            print(str(a[p])+" is not present in the list")     
+34
+s1=singlelinkedlist()
+35
+while True:
+36
+    x=int(input())
+37
+    if x==-1:
+38
+        p=int(input())
+39
+        break
+40
+    else:
+41
+        s1.create(x)
+42
+s1.searchelement()
