@@ -19,7 +19,7 @@ def show():
         for j in range(n):
             print(graph[i][j],end=" ")
         print()
-def addedge(node1,node2,w):
+def addedge(node1,node2):
     if node1 not in nodes:
         print(node1,"is not available in graph")
     elif node2 not in nodes:
